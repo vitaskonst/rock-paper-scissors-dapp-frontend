@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css" />
+
+    <!-- Etherium library -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <!-- CSS styles library -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Notification library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="static/scripts/abi.js" type="application/javascript"></script>
+    <script src="static/scripts/script.js" type="application/javascript"></script>
+  </head>
+  <body class="h-screen">
+    <header class="absolute inset-x-0 top-0 flex justify-between px-4 py-3 bg-gray-700/50 text-white h-14">
+      <a href="/" class="cursor-pointer">
+        <marquee class="w-auto" direction="right" scrollamount="5">
+          Rock Paper Scissors <sup class="inline-block transform rotate-12">Dapp!</sup>
+        </marquee>
+      </a>
+      <button id="connectWalletBtn" class="hidden rounded-lg bg-sky-400 hover:bg-sky-500 px-4 py-1 text-black whitespace-nowrap">Connect Wallet</button>
+    </header>
+    <main class="flex flex-col h-screen justify-center text-gray-900 text-xl mx-auto text-white gap-y-8 pt-14 overflow-x-hidden px-64">
+      <h1 class="text-4xl text-center">Choose your figure</h1>
+      <form class="flex flex-col w-full min-w-fit max-w-6xl items-center justify-between mx-auto bg-gray-700/50 rounded-lg px-10 py-10 gap-y-8 shadow-xl shadow-black/25">
+        <div class="flex w-full justify-between flex-wrap">
+          <img id="rockImg" class="h-auto box-border border-4 border-transparent" src="static/images/rock.png" alt="">
+          <img id="paperImg" class="h-auto box-border border-4 border-transparent" src="static/images/paper.png" alt="">
+          <img id="scissorsImg" class="h-auto box-border border-4 border-transparent" src="static/images/scissors.png" alt="">
+        </div>
+
+        <input type="checkbox" id="rock" class="hidden" name="rock">
+        <input type="checkbox" id="paper" class="hidden" name="paper">
+        <input type="checkbox" id="scissors" class="hidden" name="scissors">
+        
+        <div class="flex w-full justify-center items-center gap-x-10">
+          <label for="deposit">Deposit</label>
+          <input id="deposit" class="text-black px-2 py-1" type="number" value="0" min="0">
+        </div>
+        
+        <input class="rounded-lg bg-sky-400 hover:bg-sky-500 px-4 py-1 text-black whitespace-nowrap w-full" type="button" id="playBtn" value="Play">
+      </form>
+    </main>
+  </body>
+</html>

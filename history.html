@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css" />
+
+    <!-- Etherium library -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <!-- CSS styles library -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Notification library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="static/scripts/abi.js" type="application/javascript"></script>
+    <script src="static/scripts/script.js" type="application/javascript"></script>
+  </head>
+  <body class="h-screen">
+    <header class="absolute inset-x-0 top-0 flex justify-between px-4 py-3 bg-gray-700/50 text-white h-14">
+      <a href="/" class="cursor-pointer">
+        <marquee class="w-auto" direction="right" scrollamount="5">
+          Rock Paper Scissors <sup class="inline-block transform rotate-12">Dapp!</sup>
+        </marquee>
+      </a>
+      <button id="connectWalletBtn" class="hidden rounded-lg bg-sky-400 hover:bg-sky-500 px-4 py-1 text-black whitespace-nowrap">Connect Wallet</button>
+    </header>
+    <main class="flex flex-col h-screen justify-center text-gray-900 text-xl mx-auto text-white gap-y-8 pt-14 overflow-hidden">
+      <h1 class="text-4xl text-center">Game History</h1>
+      <table class="bg-white max-h-96 w-full divide-y divide-gray-200 block overflow-auto whitespace-nowrap">
+        <tbody id="tableBody" class="divide-y divide-gray-200 table w-full"></tbody>
+      </table>
+
+      <input class="rounded-lg bg-sky-400 hover:bg-sky-500 px-4 py-1 text-black whitespace-nowrap w-full" type="button" id="refreshHistoryBtn" value="Refresh History">
+    </main>
+  </body>
+</html>

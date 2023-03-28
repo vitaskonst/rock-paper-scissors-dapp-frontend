@@ -10,18 +10,7 @@
 git clone https://github.com/vitaskonst/rock-paper-scissors-dapp-frontend.git
 ```
 
-2. Установите зависимости
-
-```
-cd rock-paper-scissors-dapp-frontend
-npm install
-```
-
-3. Запустите проект:
-
-```
-npm start
-```
+2. Запустите проект, захостив статические файлы с помощью VS Code Live Server Plugin или любым другим веб сервером
 
 ## Использование
 
